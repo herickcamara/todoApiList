@@ -1,0 +1,20 @@
+version: "3.3"
+services:
+  db:
+    image: postgres:14.5
+    environment:
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_USER: postgres
+      POSTGRES_DB: todos
+    volumes:
+      - db_data/var/lib/postgres
+    ports:
+      - "5432:5432"
+  app:
+    container_name: api-node
+    restart: always
+    build: .
+    ports:
+      - "3000:3000"
+    depends_on:
+      - db

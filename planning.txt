@@ -1,0 +1,8 @@
+CRUD TO PHRASES
+
+
+ok - POST /phrase - create phrases new
+ok - GET /phrase -  list all phrases
+ok - GET /phrase/:id - get information from a phrase
+ok - PUT /phrase/:id -update information of a sentence
+ok - DELETE /phrase/:id - Delete a phrase
